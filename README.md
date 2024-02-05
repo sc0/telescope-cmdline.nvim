@@ -4,7 +4,7 @@
 
 This version adds a couple of features on top of the original plugin 
 that I was missing. This includes:
-- **Fuzzy search** - in this version you can actually fuzzy search for the command you're looking for (now merged!)
+- **Fuzzy search** - in this version you can actually fuzzy search for the command you're looking for [(now merged!)](https://github.com/jonarrien/telescope-cmdline.nvim/pull/13)
 - **Command builder** – using `:Telescope cmdline builder` you can now trigger a window that presents only commands (not history) and that allows you to build multi-word commands and with fuzzy-search and selecting specific phrases with `<space>` you can save a lot of keystrokes.
 - **Documentation preview** - in command builder there is a previewer that will show docs for the selected comment. **NOTE:** This feature is in beta and for now works only in very specific cases. This will be improved soon.
 

@@ -35,7 +35,7 @@ end
 -- Public
 
 M.autocomplete    = function(text)
-	if #previous_search == 0 or text:sub(-1) == " " or #text <= #previous_search then
+	if #text == 0 or #text <= #previous_search or text:sub(-1) == " " then
 		local split = vim.split(text, " ")
 		table.remove(split)
 		local input_start = table.concat(split, " ")

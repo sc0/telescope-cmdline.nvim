@@ -48,4 +48,12 @@ C.autocomplete = function(text)
   return utils.merge_results(completions, history)
 end
 
+C.autocomplete_no_history = function(text)
+	if tonumber(text) then
+		return { { type = "number", index = 1, cmd = text, desc = "Go to line " .. text } }
+	end
+
+	return state.autocomplete(text)
+end
+
 return C

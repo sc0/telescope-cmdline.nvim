@@ -78,7 +78,7 @@ A.complete_input = function(prompt_bufnr)
   local command = action_state.get_selected_entry()
   if not command then return end
   local picker = action_state.get_current_picker(prompt_bufnr)
-  picker:set_prompt(command.cmd)
+	picker:set_prompt(command.cmd .. " ")
 end
 
 A.edit = function(prompt_bufnr)
@@ -109,6 +109,15 @@ A.run_selection = function(prompt_bufnr)
   if string.len(command.cmd) == 0 then return end
   actions.close(prompt_bufnr)
   run(command.cmd)
+end
+
+A.builder_run_selection = function(prompt_bufnr)
+	local input = get_user_input(prompt_bufnr)
+	if input ~= nil and #input > 0 and input:sub(#input) == " " then
+		A.run_input(prompt_bufnr)
+	else
+		A.run_selection(prompt_bufnr)
+	end
 end
 
 return A

@@ -11,7 +11,9 @@ that I was missing. This includes:
 See the example usage of **Command Builder** below:
 ![Builder demo](.docs/builder-demo.gif)
 
+---
 
+# Original README
 
 Telescope extension to use command line in a floating window, rather
 than in bottom-left corner.
